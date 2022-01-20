@@ -13,7 +13,7 @@ with open('phonebook_raw.csv', 'w') as f:
 with open("phonebook_raw.csv") as f:
   rows = csv.reader(f, delimiter=",")
   contacts_list = list(rows)
-pprint(contacts_list)
+# pprint(contacts_list)
 
 # # TODO 1: выполните пункты 1-3 ДЗ
 #task 1
@@ -27,6 +27,9 @@ result_phone = re.sub(condition_phone, substitution_phone, contacts_list)
 print(result_names)
 
 # # TODO 2: сохраните получившиеся данные в другой файл
+with open ('phonebook_new version.csv', 'w') as f:
+  f.write(result_names)
+
 # # код для записи файла в формате CSV
 # with open("phonebook.csv", "w") as f:
 #   datawriter = csv.writer(f, delimiter=',')
