@@ -27,12 +27,11 @@ result_phone = re.sub(condition_phone, substitution_phone, contacts_list)
 print(result_names)
 
 # # TODO 2: сохраните получившиеся данные в другой файл
-with open ('phonebook_new version.csv', 'w') as f:
-  f.write(result_names)
+
 
 # # код для записи файла в формате CSV
-# with open("phonebook.csv", "w") as f:
-#   datawriter = csv.writer(f, delimiter=',')
-#   # Вместо contacts_list подставьте свой список
-#   datawriter.writerows(contacts_list)
+with open("phonebook.csv", "w") as f:
+  datawriter = csv.writer(f, delimiter=',')
+  # Вместо contacts_list подставьте свой список
+  datawriter.writerows(result_names)
 
